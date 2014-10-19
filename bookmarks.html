@@ -1,0 +1,39 @@
+<!--
+    TODO: add a <select> to edit form to choose parent folder
+    TODO: remember folder states
+    TODO: cache bookmarks
+    TODO: ERROR/USER-INPUT CHECKING! (so boring....)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Bookmarks Viewer</title>
+<link rel="stylesheet" type="text/css" href="bookmarks.css" />
+<script src="bookmarks.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="editForm" class="bar">
+            <input id="editBookmarkId" type="hidden" value="" />
+
+            <label for="editTitle">Title</label>
+            <input onfocus="this.select()" id="editTitle" name="editTitle" type="text" />
+
+            <span id="urlForm">
+                <label onfocus="this.select()" for="editUrl">URL</label>
+                <input id="editUrl" name="editUrl" type="text" />
+            </span>
+
+            <button onclick="editBookmark(document.getElementById('editBookmarkId').value)">Done</button>
+            <button onclick="cancelEditForm()">Cancel</button>
+        </div>
+        <div id="bottomButtons">
+            <a class="button" href="options.html" title="Options"><img src="options_icon.png" alt="Options" /></a>
+        </div>
+        <h1 id="heading"></h1>
+        <div id="bookmarks"></div>
+    </div>
+</body>
+</html>
+

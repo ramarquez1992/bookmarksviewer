@@ -1,0 +1,20 @@
+{
+  "name": "Bookmarks Viewer",
+  "version": "0.9.9",
+  "description": "View your bookmarks from the new tab page.",
+  "options_page": "options.html",
+
+   "manifest_version": 2,
+   
+  "chrome_url_overrides": {
+      "newtab": "bookmarks.html"
+  },
+
+  "icons": {
+       "16": "icon16.png",
+       "48": "icon48.png"
+  },
+
+  "permissions": [ "bookmarks" ]
+}
+
